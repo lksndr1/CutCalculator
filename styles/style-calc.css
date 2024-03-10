@@ -1,0 +1,406 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background-image: url(/images/gears.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+}
+
+.wrapper::after {
+    background: #0c3632;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .85;
+    position: absolute;
+    top: 0;
+    transition: all .25s ease;
+    width: 100%;
+}
+
+.header {
+    padding: 20px;
+}
+
+.nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    line-height: 1.5;
+}
+
+.logo-img {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    padding: 0 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-list li:last-of-type {
+    padding-right: 0;
+}
+
+.nav-list-link {
+    position: relative;
+    transition: all .25s ease;
+}
+
+.nav-list-link::after {
+    background: #17baaa;
+    bottom: -8px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: all .25s ease;
+    width: 100%;
+}
+
+.nav-list-link:hover {
+    color: #17baaa;
+}
+
+.nav-list-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-list li:last-of-type a {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px;
+    background-color: red;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all .25s ease;
+}
+
+.phone-icon {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.nav-list li:last-of-type a:hover {
+    background: #c9233a;
+    color: #fff;
+}
+
+.nav-list li:last-of-type a svg {
+    width: 1em;
+    fill: white;
+    stroke: white;
+    stroke-width: 1;
+}
+
+/* .nav-toggle {
+    font-size: 2rem;
+    color: #fff;
+    display: none;
+}
+
+.burger-icon {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+    cursor: pointer;
+} */
+
+.main-content {
+    padding: 20px;
+    margin: auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.main-content-title {
+    font-size: 56px;
+    color: white;
+    line-height: 84px;
+}
+
+.main-content-title-green {
+    color: #17baaa;
+}
+
+.main-content-btn {
+    display: block;
+    background: #17baaa;
+    color: #fff;
+    align-items: center;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 700;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 40px;
+    outline: none;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+.main-content-btn:hover {
+    background: #129185;
+}
+
+.footer {
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* @media screen and (max-width: 992px) {
+    .nav-list {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+} */
+
+#menu-burger {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+
+    #menu-burger {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .c-burger {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 96px;
+        height: 96px;
+        font-size: 0;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    .c-burger:focus {
+        outline: none;
+    }
+
+    .c-burger span {
+        display: block;
+        position: absolute;
+        top: 44px;
+        left: 18px;
+        right: 18px;
+        height: 8px;
+        background: #fff;
+    }
+
+    .c-burger span::before,
+    .c-burger span::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: #fff;
+        content: "";
+    }
+
+    .c-burger span::before {
+        top: -20px;
+    }
+
+    .c-burger span::after {
+        bottom: -20px;
+    }
+
+    .c-burger-line {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .c-burger-line span {
+        transition: background 0s 0.3s;
+    }
+
+    .c-burger-line span::before,
+    .c-burger-line span::after {
+        transition-duration: 0.3s 0.3s;
+        transition-delay: 0.3s 0s;
+    }
+
+    .c-burger-line span::before {
+        transition: top, transform;
+    }
+
+    .c-burger-line span::after {
+        transition: bottom, transform;
+    }
+
+    .c-burger-line.is-active {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .c-burger-line.is-active span {
+        background: none;
+    }
+
+    .c-burger-line.is-active span::before {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .c-burger-line.is-active span::after {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .c-burger-line.is-active span::before,
+    .c-burger-line.is-active span::after {
+        transition-delay: 0s, 0.3s;
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 200px 30px 30px 0px;
+        transition: left 0.3s ease 0s;
+        line-height: 48px;
+    }
+
+    .nav-list.active li {
+        padding: 0px;
+    }
+
+}
+
+/* dla kalculatora */
+
+.container-calculator {
+    display: flex;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 1200px;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    color: black;
+}
+
+.inData {
+    flex-basis: 650px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 50px;
+}
+
+.outResults {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.options {
+    display: none
+}
+
+.operations,
+.workpieces,
+.toolmaterials,
+.tooldiameters,
+.teethnumbers {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+    .container-calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form {
+        max-width: 80vw;
+        max-height: 200px;
+    }
+
+    .inData {
+        margin-bottom: 40px;
+        margin-right: 0px;
+    }
+
+    .outResults {
+        margin-right: 0px;
+    }
+}

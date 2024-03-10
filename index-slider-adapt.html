@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CutCalculator</title>
-    <link rel="stylesheet" href="./styles/style1.css">
+    <title>Slider</title>
+    <link rel="stylesheet" href="./styles/style-slider-adapt.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -61,13 +61,63 @@
                 </div>
             </nav>
         </header>
-        <main class="main-content">
-            <h1 class="main-content-title">Learn more about<br>
-                <span class="main-content-title-green">cutting parameters</span>
-            </h1>
-            <div>
-                <a href="./index-slider-adapt.html" class="main-content-btn">Learn →</a>
+        <main class="main-slider">
+
+            <!-- <button class="button slider-prev">&lt;</button> -->
+
+            <div class="container-slider">
+                <div class="slider">
+                    <div id="scrollImage" class="slider-line">
+                        <img src="./images/drilling.jpg" alt="drilling-process">
+                        <img src="./images/turning.jpg" alt="turning-process">
+                        <img src="./images/milling.jpg" alt="milling-process">
+                        <img src="./images/boring.png" alt="boring-process">
+                    </div>
+                </div>
             </div>
+            <div class="buttons">
+                <button class="button slider-prev">&lt;</button>
+                <button class="button slider-next">&gt;</button>
+            </div>
+    </div>
+
+    <!-- Опис параметрів -->
+    <div class="wrapper2">
+        <div class="info">
+            <article>
+                <h2 id="article-name">
+                    Optimizing Drilling Performance: The Crucial Role of Spindle Speed and Feed
+                </h2>
+                <p id="brief-description">
+                    Drilling is a fundamental process in various industries, from oil and gas exploration to
+                    metalworking and construction. Achieving optimal drilling performance requires careful
+                    consideration
+                    of several parameters, with spindle speed and feed being two of the most critical factors.
+                    Let's
+                    delve into the significance of these parameters and their impact on drilling operations.<br>
+                </p>
+                <span id="parameter_name1" class="parameter">Spindle Speed: Precision in Rotation</span><br>
+                <p id="parameter_deskr1">
+                    Spindle speed, measured in revolutions per minute (RPM), refers to the rate at which the
+                    drill
+                    bit
+                    rotates. The choice of spindle speed is pivotal as it directly influences the efficiency of
+                    cutting,
+                    tool life, and overall drilling performance.<br>
+                </p>
+                <span id="parameter_name2" class="parameter">Feed Rate: Controlling the Descent</span><br>
+                <p id="parameter_deskr2">
+                    Feed rate, often expressed in inches per revolution or millimeters per minute, represents
+                    the
+                    speed
+                    at which the drill bit moves into the material being drilled. It plays a crucial role in
+                    determining
+                    the depth and quality of the borehole.
+                </p>
+            </article>
+        </div>
+        <!-- </div> -->
+
         </main>
         <footer class="footer">
             <div>
@@ -75,6 +125,7 @@
             </div>
         </footer>
     </div>
+    <script src="./scripts/script-slider-adapt.js"></script>
     <script src="./scripts/script1.js"></script>
 </body>
 

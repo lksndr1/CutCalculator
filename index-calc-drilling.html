@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CutCalculator</title>
-    <link rel="stylesheet" href="./styles/style1.css">
+    <link rel="stylesheet" href="./styles/style-calc.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -62,12 +62,65 @@
             </nav>
         </header>
         <main class="main-content">
-            <h1 class="main-content-title">Learn more about<br>
-                <span class="main-content-title-green">cutting parameters</span>
-            </h1>
-            <div>
-                <a href="./index-slider-adapt.html" class="main-content-btn">Learn →</a>
+
+            <div class="container-calculator">
+                <!-- Введення даних -->
+                <form action="" class="form inData">
+                    <!-- <div class="operations">
+                        <input class="options" id="operation">
+                        <label for="operation">Operation</label>
+                        <select name="" id="operationSelect">
+                            <option value="1">Drilling</option>
+                            <option value="2">Lathe</option>
+                            <option value="3">Milling</option>
+                            <option value="4">Boring</option>
+                        </select>
+                    </div> -->
+                    <div class="workpieces">
+                        <input type="text" class="options" id="workpiece">
+                        <label for="workpiece">Workpiece</label>
+                        <select name="" id="workpieceSelect">
+                            <option value="5">Steel</option>
+                            <option value="6">Cast Iron</option>
+                            <option value="7">Aluminum</option>
+                            <option value="8">Brass</option>
+                        </select>
+                    </div>
+                    <div class="toolmaterials">
+                        <input type="text" class="options" id="toolmaterial">
+                        <label for="toolmaterial">Tool material</label>
+                        <select name="" id="toolmaterialSelect">
+                            <option value="9">HSS</option>
+                            <option value="10">Carbide</option>
+                        </select>
+                    </div>
+                    <div class="tooldiameters">
+                        <label for="tooldiameter">Tool diameter/hole diameter</label>
+                        <input type="number" id="tooldiameter" step="0.05" min="1" max="100" value="10">
+                    </div>
+                    <!-- <div class="teethnumbers">
+                        <label for="teethnumber">Number of teeth</label>
+                        <input type="number" id="teethnumber" step="1" min="1" max="12" value="2">
+                    </div> -->
+                    <button id="calcButton">To calculate</button>
+                </form>
+                <!-- Виведення результатів -->
+                <form action="" class="form outResults">
+                    <h2 class="heading">Cutting parameters:</h2>
+                    <div class="results">
+                        <div class="calcS">
+                            <span>RPM:</span>
+                            <output id="calcRpm"><span id="calcSpeed">0</span> rpm</output>
+                        </div>
+                        <div class="calcF">
+                            <span>Feed:</span>
+                            <output id="calcMmmin"><span id="calcFeed">0</span> mm/min</output>
+                        </div>
+                    </div>
+                </form>
+
             </div>
+
         </main>
         <footer class="footer">
             <div>
@@ -75,6 +128,7 @@
             </div>
         </footer>
     </div>
+    <script src="./scripts/script-calc-drilling.js"></script>
     <script src="./scripts/script1.js"></script>
 </body>
 
